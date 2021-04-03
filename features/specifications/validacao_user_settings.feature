@@ -60,16 +60,14 @@ Cenario: Validar o card 'Sales'
     |country     |aceitar somente letras, aceitar minimo de 3 caracteres e maximo de 30    |
     |postal code |Aceitar somente numeros, aceitar somente 8 caracteres                    |
 
-  ##### USER INFORMATION #####
-  Esquema do Cenario: validar a edição dos campos do quadro Contact Information
-  Quando visualizo o campo '<campo>' do quadro Contact Information
+  #####  ABOUT ME  #####
+  Esquema do Cenario: validar a edição dos campos do quadro About Me
+  Quando visualizo o campo '<campo>' do quadro About Me
   Então devo verificar se o campo está editável
   E se está seguindo as '<regras>'
   E se a informação alterada está sendo salva corretamente na base
   Exemplos:
-    |campo       |regras                                                                   |
-    |address     |aceitar numeros e letras, aceitar minimo de 5 caracteres e maximo de 80  |
-    |city        |aceitar somente letras, aceitar minimo de 3 caracteres e maximo de 30    |
-    |country     |aceitar somente letras, aceitar minimo de 3 caracteres e maximo de 30    |
-    |postal code |Aceitar somente numeros, aceitar somente 8 caracteres                    |
+    |campo       |regras                                                                                   |
+    |about me    |aceitar numeros e letras, aceitar minimo de 20 caracteres e maximo de 500, Aceitar emojis|
+    
 
