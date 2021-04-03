@@ -36,27 +36,40 @@ Cenario: Validar o card 'Sales'
 
   ##### USER INFORMATION #####
   Esquema do Cenario: validar a edição dos campos do quadro User Information
-  Quando visualizo o campo '<campo>'
+  Quando visualizo o campo '<campo>' do quadro User Information 
   Então devo verificar se o campo está editável
   E se está seguindo as '<regras>'
   E se a informação alterada está sendo salva corretamente na base
   Exemplos:
     |campo       |regras                                                                                             |
-    |username    |todos as letras minusculas, aceitar numeros e letras, aceitar minimo de 3 caracteres e maximo de 20|
-    |email Adress|todos as letras minusculas, esta com formato de e-mail valido, aceitar no maximo 30 caracteres     |
+    |username    |todos as letras devem ficar minusculas, aceitar numeros e letras, aceitar minimo de 3 caracteres e maximo de 20|
+    |email Adress|todos as letras devem ficar minusculas, estar com formato de e-mail valido, aceitar no maximo 30 caracteres     |
     |First Name  |Aceitar no maximo 20 caracteres, não aceitar numeros, aceitar caracteres especiais como acentos    |
     |Last Name   |Aceitar no maximo 80 caracteres, não aceitar numeros, aceitar caracteres especiais como acentos    |
 
   ##### USER INFORMATION #####
   Esquema do Cenario: validar a edição dos campos do quadro Contact Information
-  Quando visualizo o campo '<campo>'
+  Quando visualizo o campo '<campo>' do quadro Contact Information
   Então devo verificar se o campo está editável
   E se está seguindo as '<regras>'
   E se a informação alterada está sendo salva corretamente na base
   Exemplos:
-    |campo       |regras                                                                                             |
-    |username    |todos as letras minusculas, aceitar numeros e letras, aceitar minimo de 3 caracteres e maximo de 20|
-    |email Adress|todos as letras minusculas, esta com formato de e-mail valido, aceitar no maximo 30 caracteres     |
-    |First Name  |Aceitar no maximo 20 caracteres, não aceitar numeros, aceitar caracteres especiais como acentos    |
-    |Last Name   |Aceitar no maximo 80 caracteres, não aceitar numeros, aceitar caracteres especiais como acentos    |
+    |campo       |regras                                                                   |
+    |address     |aceitar numeros e letras, aceitar minimo de 5 caracteres e maximo de 80  |
+    |city        |aceitar somente letras, aceitar minimo de 3 caracteres e maximo de 30    |
+    |country     |aceitar somente letras, aceitar minimo de 3 caracteres e maximo de 30    |
+    |postal code |Aceitar somente numeros, aceitar somente 8 caracteres                    |
+
+  ##### USER INFORMATION #####
+  Esquema do Cenario: validar a edição dos campos do quadro Contact Information
+  Quando visualizo o campo '<campo>' do quadro Contact Information
+  Então devo verificar se o campo está editável
+  E se está seguindo as '<regras>'
+  E se a informação alterada está sendo salva corretamente na base
+  Exemplos:
+    |campo       |regras                                                                   |
+    |address     |aceitar numeros e letras, aceitar minimo de 5 caracteres e maximo de 80  |
+    |city        |aceitar somente letras, aceitar minimo de 3 caracteres e maximo de 30    |
+    |country     |aceitar somente letras, aceitar minimo de 3 caracteres e maximo de 30    |
+    |postal code |Aceitar somente numeros, aceitar somente 8 caracteres                    |
 
