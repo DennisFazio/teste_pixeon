@@ -1,20 +1,12 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+Olá, Tudo bem ?
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+Segue meu modelo para o teste apresentado. Tentei mostrar algumas tecnicas que conheço. 
+Fico a disposição para dúvidas e explicações sobre esse modelo.
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+Para rodar a automação front_end utilizar 'cucumber -t @hello_word -p Ambiente_Prod'
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+Para rodar o projeto Web Service API 'cucumber -t @webservice -p Ambiente_Prod'
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://www.visualstudio.com/en-us/docs/git/create-a-readme). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+O relatório HTML com resultado é gerado na pasta: \logs\html Os screenshots estão na pasta: \logs\screenshots Os logs da API em txt estão na pasta: \logs\txt A collection do postman está na pasta: \logs\collection_postman
+
+Obs.: As classes estão instanciados no arquivo 'page_helper' e não no hooks. Acho que fica mais organizado assim.
