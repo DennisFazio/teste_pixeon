@@ -66,17 +66,17 @@ end
 at_exit do
   ReportBuilder.configure do |config|
     config.json_path = "logs/json/report.json"
-    config.report_path = "logs/html/Automacao_Dennis_Fazio_report"
+    config.report_path = "logs/html/Automacao_Dennis_Fazio_Pixeon"
     config.report_types = %i[html]
     config.report_tabs = %w[Overview Features Scenarios Errors]
-    config.report_title = "Projeto de Automacao Dennis Fazio"
+    config.report_title = "Projeto de Automacao Dennis Fazio - Teste Pixeon"
     config.compress_images = false
     config.additional_info = {
-      "Projeto:" => "Projeto de Automacao Dennis Fazio",
+      "Projeto:" => "Projeto de Automacao Dennis Fazio - Teste Pixeon",
       "Ambiente" => AMBIENTE.upcase,
       "Data de Geracao" => DateTime.now.strftime("%d/%m/%Y - %H:%M:%S"),
     }
-    config.color = "black"
+    config.color = "blue"
   end
   ReportBuilder.build_report
 end

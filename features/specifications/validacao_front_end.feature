@@ -9,15 +9,16 @@ Funcionalidade: Validar os cenarios de acordo com o solicitado no teste
 ##### VALIDAÇÃO HELLO WORD #####
 @hello_word @Frontend
 Cenario: Validar o texto Hello Word após o Start
-  Dado que estou na pagina dynamic_loading hum
-  Quando clico no botão "Start"
-  Então após o carregamento deve ser apresentado o "Hello World!"
+  Dado que estou na pagina dynamic_loading
+  Quando clico no botão start
+  Então após o carregamento deve ser apresentado o texto "Hello World!"
 
-@hello_word @Frontend
+##### VALIDAÇÃO Login #####
+@login @Frontend
 Esquema do Cenario: validar o login do usuário
   Dado que estou na pagina de login
   Quando tento realizar o login informando '<username>', '<password>'
-  Então devo visualizar a '<mensagem>'
+  Então devo visualizar a mensagem '<mensagem>'
   Exemplos:
   |username |password            |mensagem                      |
   |tomsmith |SuperSecretPassword!|You logged into a secure area!|
