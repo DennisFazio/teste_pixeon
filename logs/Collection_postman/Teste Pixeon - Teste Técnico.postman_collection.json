@@ -1,0 +1,359 @@
+{
+	"info": {
+		"_postman_id": "7760dcbd-3fc0-44ec-911b-dc377a8f1865",
+		"name": "Teste Pixeon - Teste Técnico",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get",
+			"item": [
+				{
+					"name": "Get_user_all",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"name\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"username\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"email\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"address\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"street\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"suite\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"city\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"zipcode\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"geo\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"lat\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"lng\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"phone\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"website\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"company\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"catchPhrase\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"bs\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://jsonplaceholder.typicode.com/users",
+							"protocol": "http",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_user_by_id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"name\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"username\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"email\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"address\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"street\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"suite\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"city\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"zipcode\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"geo\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"lat\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"lng\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"phone\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"website\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"company\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"catchPhrase\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"bs\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://jsonplaceholder.typicode.com/users/:id",
+							"protocol": "http",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_user_by_name",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"name\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"username\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"email\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"address\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"street\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"suite\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"city\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"zipcode\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"geo\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"lat\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"lng\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"phone\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"website\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"company\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"catchPhrase\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"bs\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://jsonplaceholder.typicode.com/users?name=Leanne Graham",
+							"protocol": "http",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Leanne Graham"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Put",
+			"item": [
+				{
+					"name": "Put_user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "charset",
+								"value": "UTF-8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Leanne DFF Graham\",\r\n    \"username\": \"DFF\",\r\n    \"email\": \"DFF@april.biz\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://jsonplaceholder.typicode.com/users/:id",
+							"protocol": "http",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "Post_New_user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"name\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"username\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"email\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"address\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"street\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"suite\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"city\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"zipcode\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"geo\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"lat\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"lng\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"phone\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"website\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"company\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"catchPhrase\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"bs\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"id\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "charset",
+								"value": "UTF-8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Seiya de Pegasus da Silva\",\r\n    \"username\": \"Peg86\",\r\n    \"email\": \"peg86@santuario.greg\",\r\n    \"address\": {\r\n        \"street\": \"Sagistarius Light\",\r\n        \"suite\": \"Casa 9\",\r\n        \"city\": \"Atenas\",\r\n        \"zipcode\": \"92998-3874\",\r\n        \"geo\": {\r\n            \"lat\": \"37.58.46\",\r\n            \"lng\": \"23.42.58\"\r\n        }\r\n    },\r\n    \"phone\": \"1-770-736-8031 x56442\",\r\n    \"website\": \"hildegard.org\",\r\n    \"company\": {\r\n        \"name\": \"Romaguera-Crona\",\r\n        \"catchPhrase\": \"Multi-layered client-server neural-net\",\r\n        \"bs\": \"harness real-time e-markets\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://jsonplaceholder.typicode.com/users",
+							"protocol": "http",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Delete",
+			"item": [
+				{
+					"name": "Delete_user_by_id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://jsonplaceholder.typicode.com/users/:id",
+							"protocol": "http",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

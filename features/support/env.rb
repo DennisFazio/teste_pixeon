@@ -16,7 +16,8 @@ AMBIENTE = ENV["AMBIENTE"]
 World(PageObjects)
 
 ##### ARQUIVOS CARREGADOS #####
-CONFIG = YAML.load_file(Dir.pwd + "/features/support/generators/fixtures/ambientes.yml") # Dir.pwd procura em toda raiz do projeto (Mais abrangente)
+CONFIG = YAML.load_file(Dir.pwd + "/features/support/generators/fixtures/ambientes.yml")
+USER_STRUCTURE = YAML.load_file(Dir.pwd + "/features/support/generators/fixtures/user_structure.yml")
 
 ##### CONFIG CAPYBARA #####
 Capybara.configure do |config|

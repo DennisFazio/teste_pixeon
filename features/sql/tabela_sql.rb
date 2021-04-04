@@ -2,7 +2,6 @@
 
 require "tiny_tds"
 
-# Dados CMS
 class Db_Tabela
   def initialize
     servidor = "homolog"
@@ -14,7 +13,6 @@ class Db_Tabela
     results = @cms.execute("SELECT * from tabela")
     retorno = []
     results.each do |row|
-      # obj = TotalDisparosDia.new
       obj.data = row["data"]
       obj.total = row["Quantity"]
       retorno.push(obj)
