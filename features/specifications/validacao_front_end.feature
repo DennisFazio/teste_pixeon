@@ -1,6 +1,6 @@
 #language: pt
 
-Funcionalidade: Validar os cenarios de acordo com o solicitado no teste
+Funcionalidade: Validar os cenarios de FrontEnd de acordo com o solicitado no teste
 --No site Frontend 1 é esperado uma automação que clique no botão start, aguarde pelo carreganeto
 ---- Faça uma validação que o texto “Hello World!” foi apresentado.
 ---- Valide um login (com sucesso e com erro)

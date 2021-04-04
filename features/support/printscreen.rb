@@ -3,11 +3,16 @@
 # require "./features/support/entity/email_cartabandonconfig.rb"
 
 class PrintScreen
-  def tira_print(nome_arquivo, resultado)
+  def tirar_print(nome_arquivo)
     foto = PrintScreenType.new
-    foto.nome = nome_arquivo
-    foto.caminho = "logs/screenshots/test_#{resultado}/#{foto.nome}.png"
-    print = "logs/screenshots/test_#{resultado}/#{foto.nome}.png"
+    if nome_arquivo.nil?
+      foto.nome = "arquivo_#{DateTime.now.strftime("%d/%m/%Y-%H:%M:%S")}"
+    else
+      foto.nome = nome_arquivo
+    end
+
+    foto.caminho = "logs/screenshots/#{foto.nome}.png"
+    print = "logs/screenshots/#{foto.nome}.png"
     Capybara.page.save_screenshot(print)
     $filme.push(foto)
   rescue StandardError => e
