@@ -6,4 +6,12 @@ module PageObjects
   def dynamic_loading
     @dynamic_loading ||= DynamicLoading.new
   end
+
+  def login
+    @login ||= Login.new
+  end
+
+  def screen
+    @screen ||= PrintScreen.new
+  end
 end

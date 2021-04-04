@@ -11,11 +11,7 @@ After do |scenario|
   step = pega_nome_step
   screenshot_name = "cenario_#{nome_cenario}_step_#{step}"
   begin
-    if scenario.failed?
-      PrintScreen.new.tira_print(screenshot_name.downcase, "falhou")
-    else
-      PrintScreen.new.tira_print(screenshot_name.downcase, "passou")
-    end
+    PrintScreen.new.tirar_print(screenshot_name.downcase)
     # add_browser_logs
     anexa_print
   rescue StandardError
