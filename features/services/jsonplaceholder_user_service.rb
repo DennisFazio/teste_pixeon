@@ -19,4 +19,14 @@ class JsonPlaceHolderUser
     puts "Erro ao chamar a get_user_users_by_id"
     puts "Error message: #{e}"
   end
+
+  def get_user_by_name(name)
+    url = "#{@@url}?name=#{name}"
+    header = { 'content-type': "application/json" }
+
+    HTTParty.get(url, headers: header)
+  rescue StandardError => e
+    puts "Erro ao chamar a get_user_users_by_id"
+    puts "Error message: #{e}"
+  end
 end
