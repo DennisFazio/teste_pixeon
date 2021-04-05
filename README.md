@@ -12,6 +12,10 @@ gem install bundler -v 1.11.2
 * Para instalar todas as extensões necessárias para o projeto rodar o comando abaixo:
 bundle install
 
+* Para o teste 1 - Criei o arquivo validacao_user_settings.feture que está no caminho abaixo:
+<br>
+  <br><br>fetures > specifications
+
 * Para rodar todos os cenários da automação front_end utilizar 'cucumber -t @Frontend -p Ambiente_Prod'
 
     Pode rodar uma por uma também trocando a tag -t @hello_word ou -t @login
