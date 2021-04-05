@@ -69,24 +69,29 @@
 									"pm.test(\"Status code is 200\", function () {\r",
 									"    pm.response.to.have.status(200);\r",
 									"});\r",
-									"pm.test(\"Body matches string\", function () {\r",
-									"    pm.expect(pm.response.text()).to.include(\"name\");\r",
-									"    pm.expect(pm.response.text()).to.include(\"username\");\r",
-									"    pm.expect(pm.response.text()).to.include(\"email\");\r",
-									"    pm.expect(pm.response.text()).to.include(\"address\");\r",
-									"    pm.expect(pm.response.text()).to.include(\"street\");\r",
-									"    pm.expect(pm.response.text()).to.include(\"suite\");\r",
-									"    pm.expect(pm.response.text()).to.include(\"city\");\r",
-									"    pm.expect(pm.response.text()).to.include(\"zipcode\");\r",
-									"    pm.expect(pm.response.text()).to.include(\"geo\");\r",
-									"    pm.expect(pm.response.text()).to.include(\"lat\");\r",
-									"    pm.expect(pm.response.text()).to.include(\"lng\");\r",
-									"    pm.expect(pm.response.text()).to.include(\"phone\");\r",
-									"    pm.expect(pm.response.text()).to.include(\"website\");\r",
-									"    pm.expect(pm.response.text()).to.include(\"company\");\r",
-									"    pm.expect(pm.response.text()).to.include(\"catchPhrase\");\r",
-									"    pm.expect(pm.response.text()).to.include(\"bs\");\r",
-									"});"
+									"\r",
+									"pm.test(\"Body is correct?\", function () {\r",
+									"    const responseJson = pm.response.json();\r",
+									"    pm.expect(responseJson.id).to.be.a('number');\r",
+									"    pm.expect(responseJson.name).to.be.a('string');\r",
+									"    pm.expect(responseJson.username).to.be.a('string');\r",
+									"    pm.expect(responseJson.email).to.be.a('string');\r",
+									"    pm.expect(responseJson.address).to.be.a('object');\r",
+									"    pm.expect(responseJson.address.street).to.be.a('string');\r",
+									"    pm.expect(responseJson.address.suite).to.be.a('string');\r",
+									"    pm.expect(responseJson.address.city).to.be.a('string');\r",
+									"    pm.expect(responseJson.address.zipcode).to.be.a('string');\r",
+									"    pm.expect(responseJson.address.geo).to.be.a('object');\r",
+									"    pm.expect(responseJson.address.geo.lat).to.be.a('string');\r",
+									"    pm.expect(responseJson.address.geo.lng).to.be.a('string');\r",
+									"    pm.expect(responseJson.phone).to.be.a('string');\r",
+									"    pm.expect(responseJson.website).to.be.a('string');\r",
+									"    pm.expect(responseJson.company).to.be.a('object');\r",
+									"    pm.expect(responseJson.company.name).to.be.a('string');\r",
+									"    pm.expect(responseJson.company.catchPhrase).to.be.a('string');\r",
+									"    pm.expect(responseJson.company.bs).to.be.a('string');\r",
+									"});\r",
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -127,24 +132,44 @@
 									"pm.test(\"Status code is 200\", function () {\r",
 									"    pm.response.to.have.status(200);\r",
 									"});\r",
+									"\r",
+									"pm.test(\"Body is correct?\", function () {\r",
+									"    const responseJson = pm.response.json();\r",
+									"    console.log(responseJson);\r",
+									"    pm.expect(responseJson[0].id).to.be.a('number');\r",
+									"    pm.expect(responseJson[0].name).to.be.a('string');\r",
+									"    pm.expect(responseJson[0].username).to.be.a('string');\r",
+									"    pm.expect(responseJson[0].email).to.be.a('string');\r",
+									"    pm.expect(responseJson[0].address).to.be.a('object');\r",
+									"    pm.expect(responseJson[0].address.street).to.be.a('string');\r",
+									"    pm.expect(responseJson[0].address.suite).to.be.a('string');\r",
+									"    pm.expect(responseJson[0].address.city).to.be.a('string');\r",
+									"    pm.expect(responseJson[0].address.zipcode).to.be.a('string');\r",
+									"    pm.expect(responseJson[0].address.geo).to.be.a('object');\r",
+									"    pm.expect(responseJson[0].address.geo.lat).to.be.a('string');\r",
+									"    pm.expect(responseJson[0].address.geo.lng).to.be.a('string');\r",
+									"    pm.expect(responseJson[0].phone).to.be.a('string');\r",
+									"    pm.expect(responseJson[0].website).to.be.a('string');\r",
+									"    pm.expect(responseJson[0].company).to.be.a('object');\r",
+									"    pm.expect(responseJson[0].company.name).to.be.a('string');\r",
+									"    pm.expect(responseJson[0].company.catchPhrase).to.be.a('string');\r",
+									"    pm.expect(responseJson[0].company.bs).to.be.a('string');\r",
+									"});\r",
+									"\r",
 									"pm.test(\"Body matches string\", function () {\r",
-									"    pm.expect(pm.response.text()).to.include(\"name\");\r",
-									"    pm.expect(pm.response.text()).to.include(\"username\");\r",
-									"    pm.expect(pm.response.text()).to.include(\"email\");\r",
-									"    pm.expect(pm.response.text()).to.include(\"address\");\r",
-									"    pm.expect(pm.response.text()).to.include(\"street\");\r",
-									"    pm.expect(pm.response.text()).to.include(\"suite\");\r",
-									"    pm.expect(pm.response.text()).to.include(\"city\");\r",
-									"    pm.expect(pm.response.text()).to.include(\"zipcode\");\r",
-									"    pm.expect(pm.response.text()).to.include(\"geo\");\r",
-									"    pm.expect(pm.response.text()).to.include(\"lat\");\r",
-									"    pm.expect(pm.response.text()).to.include(\"lng\");\r",
-									"    pm.expect(pm.response.text()).to.include(\"phone\");\r",
-									"    pm.expect(pm.response.text()).to.include(\"website\");\r",
-									"    pm.expect(pm.response.text()).to.include(\"company\");\r",
-									"    pm.expect(pm.response.text()).to.include(\"catchPhrase\");\r",
-									"    pm.expect(pm.response.text()).to.include(\"bs\");\r",
+									"    const responseJson = pm.response.json();\r",
+									"    pm.expect(responseJson[0].name).to.include(pm.variables.get(\"name\"));\r",
+									"\r",
 									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.variables.set(\"name\", \"Leanne Graham\");"
 								],
 								"type": "text/javascript"
 							}
@@ -154,7 +179,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://jsonplaceholder.typicode.com/users?name=Leanne Graham",
+							"raw": "http://jsonplaceholder.typicode.com/users?name={{name}}",
 							"protocol": "http",
 							"host": [
 								"jsonplaceholder",
@@ -167,7 +192,7 @@
 							"query": [
 								{
 									"key": "name",
-									"value": "Leanne Graham"
+									"value": "{{name}}"
 								}
 							]
 						}

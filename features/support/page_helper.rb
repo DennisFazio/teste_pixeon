@@ -14,4 +14,12 @@ module PageObjects
   def screen
     @screen ||= PrintScreen.new
   end
+
+  def jsonplaceholder_user
+    @jsonplaceholder_user ||= JsonPlaceHolderUsers.new
+  end
+
+  def jsonplaceholder_auxiliar_functions
+    @jsonplaceholder_auxiliar_functions ||= JsonPlaceHolderAuxiliarFunctions.new
+  end
 end
