@@ -9,7 +9,10 @@ require "site_prism"
 require "pry"
 require "report_builder"
 require "httparty"
+require "json_matchers/rspec"
 require_relative "page_helper.rb"
+
+JsonMatchers.schema_root = Dir.pwd + "/features/support/schemas/"
 
 ##### VARIÁVEIS DE CONFIGURAÇÃO #####
 AMBIENTE = ENV["AMBIENTE"]
@@ -17,7 +20,7 @@ World(PageObjects)
 
 ##### ARQUIVOS CARREGADOS #####
 CONFIG = YAML.load_file(Dir.pwd + "/features/support/generators/fixtures/ambientes.yml")
-USER_STRUCTURE = YAML.load_file(Dir.pwd + "/features/support/generators/fixtures/user_structure.yml")
+CONFIG_API = YAML.load_file(Dir.pwd + "/features/support/generators/fixtures/ambientes_jsonplaceholder_api.yml")
 
 ##### CONFIG CAPYBARA #####
 Capybara.configure do |config|
