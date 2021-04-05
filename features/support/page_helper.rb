@@ -16,7 +16,7 @@ module PageObjects
   end
 
   def jsonplaceholder_user
-    @jsonplaceholder_user ||= JsonPlaceHolderUser.new
+    @jsonplaceholder_user ||= JsonPlaceHolderUsers.new
   end
 
   def jsonplaceholder_auxiliar_functions
