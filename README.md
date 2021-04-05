@@ -20,12 +20,13 @@ Versão do Ruby 2.6.6p146 (2020-03-31 revision 67876) [x64-mingw32]
     - Para rodar todos os cenários da automação front_end utilizar 'cucumber -t @Frontend -p Ambiente_Prod'
     - Pode rodar uma por uma também trocando a tag -t @hello_word ou -t @login
 
-* Para o teste 3 - Criei o arquivo validacao_front_end.feature que está no caminho abaixo:
+* Para o teste 3 - Criei o arquivo validacao_back_end.feature que está no caminho abaixo:
   - Para rodar o projeto Web Service API 'cucumber -t @BackEnd -p Ambiente_Prod'
   - Pode rodar uma por uma também trocando a tag -t @get_user_by_name ou -t @get_user_by_id ...
 
 * O relatório HTML com resultado é gerado na pasta: \logs\html 
 * Os screenshots estão na pasta: \logs\screenshots 
 * A collection do postman está na pasta: \logs\collection_postman
+  - Fiz os mesma validação da automação no postman
 
 Obs.: As classes estão instanciados no arquivo 'page_helper' e não no hooks. Acho que fica mais organizado assim.
