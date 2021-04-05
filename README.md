@@ -16,11 +16,12 @@ bundle install
 
     Pode rodar uma por uma também trocando a tag -t @hello_word ou -t @login
 
-Para rodar o projeto Web Service API 'cucumber -t @BackEnd -p Ambiente_Prod'
-Pode rodar uma por uma também trocando a tag -t @get_user_by_name ou -t @get_user_by_id ...
+* Para rodar o projeto Web Service API 'cucumber -t @BackEnd -p Ambiente_Prod'
+    
+    Pode rodar uma por uma também trocando a tag -t @get_user_by_name ou -t @get_user_by_id ...
 
-O relatório HTML com resultado é gerado na pasta: \logs\html 
-Os screenshots estão na pasta: \logs\screenshots 
-A collection do postman está na pasta: \logs\collection_postman
+* O relatório HTML com resultado é gerado na pasta: \logs\html 
+* Os screenshots estão na pasta: \logs\screenshots 
+* A collection do postman está na pasta: \logs\collection_postman
 
 Obs.: As classes estão instanciados no arquivo 'page_helper' e não no hooks. Acho que fica mais organizado assim.
